@@ -1,3 +1,4 @@
+![True Relations](https://user-images.githubusercontent.com/15099626/228601102-5e6e55a9-19da-4713-9a39-cbdb95bf1179.jpg)
 # True Relations
 
 * True relations does two things.
@@ -47,6 +48,12 @@ When the plugin is first activated it records the notorieties between the AI rac
 With every cycle the plugin will check how notoriety has changed between you and the X3 races. For every race you've gained notoriety with you'll gain notoriety with their allies and lose notoriety with their enemies. These cycles are randomised somewhat. They should occur about every 15 minutes on average.
 
 The plugin will notify what notoriety you've lost or gained as a result of dynamic relations and also inform you if you've gained or dropped a race rank.
+
+The notoriety effect is calculated as a fraction of the original notoriety change via the following formula.
+ 
+`notoriety-effect = notoriety-gain x (fight-rank + trade-rank - 2) / 101`
+ 
+The effect increases the higher your trade rank and fight rank. It's always possible to become friends with every race.
 
 ## IFF Fixer
 
