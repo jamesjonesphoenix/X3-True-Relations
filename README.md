@@ -87,4 +87,12 @@ Because I'm an idiot.
 ### Thanks
 
 * Thanks Egosoft for making a great game.
+* Thanks Olsch for help with translations
 * Thanks Jack08 for Improved Races 2. I began this plugin as a port of the True Relations feature of that mod. 
+
+## Changelog
+
+##### 1.1
+
+* Added German, French, Italian, Czecha and Polish translations.
+* Updated lib scripts in line with Colour By Race. 
