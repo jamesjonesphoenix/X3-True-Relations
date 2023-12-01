@@ -6,6 +6,8 @@
         <t id="1">100(ratio)</t>
 <!-- Timer interval for wait between check for notoriety changes and IFF for sectors. Defaults to 180 seconds. -->
         <t id="2">180(seconds)</t>
+<!-- Chance of dynamic notoriety check is randomised. The check occurs on each timer interval (every 180 seconds by default). Defaults to 20 percent which means a check every 15 minutes on average. -->
+        <t id="3">20(percent)</t>
 <!-- True Relations Strings  -->
         <t id="10">\033GTrue Relations\033X</t>
         <t id="100">44</t>
