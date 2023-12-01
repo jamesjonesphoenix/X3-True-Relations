@@ -9,11 +9,20 @@
 	<arguments />
 	<sourcetext>
 		<line linenr="001" indent="">
+			<text>load</text>
+			<text> </text>
+			<text>text</text>
+			<text>:</text>
+			<text> </text>
+			<text>id</text>
+			<text>=</text>
+			<var>9963</var>
+		</line>
+		<line linenr="002" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>null</var>
 		</line>
-		<line linenr="002" indent="" />
 	</sourcetext>
 	<codearray>
 		<sval type="array" size="10">
@@ -23,7 +32,12 @@
 			<sval type="int" val="1" />
 			<sval type="int" val="0" />
 			<sval type="int" val="0" />
-			<sval type="array" size="1">
+			<sval type="array" size="2">
+				<sval type="array" size="3">
+					<sval type="int" val="151" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9963" />
+				</sval>
 				<sval type="array" size="3">
 					<sval type="int" val="103" />
 					<sval type="int" val="0" />
@@ -31,12 +45,7 @@
 				</sval>
 			</sval>
 			<sval type="int" val="0" />
-			<sval type="array" size="1">
-				<sval type="array" size="2">
-					<sval type="int" val="1" />
-					<sval type="int" val="2" />
-				</sval>
-			</sval>
+			<sval type="array" size="0" />
 			<sval type="int" val="0" />
 		</sval>
 	</codearray>
