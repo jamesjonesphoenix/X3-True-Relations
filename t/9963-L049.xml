@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<language id="49">
+    <!-- German -->
+    <page id="9963" title="True Relations" desc="" voice="no">
+<!-- Dynamic notoriety change = gain * (tradeSkill + fightSkill + 1) / ratio
+     You can change the ratio here, defaults to 100. -->
+        <t id="1">100(ratio)</t>
+<!-- Timer interval for wait between check for notoriety changes and IFF for sectors. Defaults to 180 seconds. -->
+        <t id="2">180(seconds)</t>
+<!-- True Relations Strings  -->
+        <t id="10">\033GTrue Relations\033X</t>
+        <t id="100">44</t>
+        <t id="101">(blank placeholder)</t>
+        <t id="1000">\033GTrue Relations\033X von FriendlyFirePhoenix. v%s</t>
+        <t id="1001">[author][green]True Relations[/green][/author]\n[title]{9963,10} deaktiviert[/title]\n\nDie globale Variable wurde entfernt.\n\nUm alle Spuren von {9963,10} vollständig zu entfernen, gehen Sie folgendermaßen vor:\n1: Speichern Sie Ihr Spiel.\n2: Löschen Sie die Plugin-Dateien aus Ihrem X3-Verzeichnis.\n3: Laden Sie Ihren Speicherstand neu.</t>
+        <t id="1002">[author][green]True Relations[/green][/author]\n[title]Initialisiere {9963,10}[/title]\n\n{9963,10} werden regelmäßig dynamische Bekanntheitsänderungen als Reaktion auf Standard-Bekanntheitsänderungen anwenden. Sie können das Verhältnis der dynamischen Änderung zur ursprünglichen Änderung in \033G\\X3\\{9963,101}\\t\\9963-L0{9963,100}.xml\033X ändern.\n\nAls Teil der Aktivierung hat das Plugin die Freund-Feind-Erkennung für Stationen und ihre eigenen Schiffe in der ganzen Galaxie behoben. Von nun an wird {9963,10} regelmäßig einen zufälligen Sektor auswählen, um IFF zu beheben, und sich langsam durch die Galaxie arbeiten. Wenn Sie die Freund-Feind-Erkennung schnell wieder für die gesamte Galaxie korrigieren möchten, können Sie das Plugin deaktivieren und erneut aktivieren.</t>
+        <t id="1003">Initialisieren von \033GTrue Relations\033X. Das wird eine Weile dauern...</t>
+        <t id="1004">\033GTrue Relations\033X wurde initialisiert.</t>
+        <t id="1005">\033GTrue Relations\033X deaktiviert.</t>
+        <t id="1006">\033GTrue Relations\033X auf Version %s aktualisiert.</t>
+        <t id="1010">Verlor %s %s-Ansehen als Effekt von %s %s-Ansehensgewinn.</t>
+        <t id="1011">%s %s-Ansehen als Effekt von %s %s-Ansehen erlangt.</t>
+        <t id="1012">True Relations korrigiert die Freund-Feind-Erkennung in der Galaxie... %s Stationen und %s eigene Schiffe geprüft.</t>
+        <t id="1015">Die %s haben dich zu %s \033Rdegradiert\033X als Strafe für deinen Ansehensgewinn bei %s.</t>
+        <t id="1016">Die %s haben dich \033Bbefördert\033X zu %s als Belohnung für deinen Ansehensgewinn bei %s.</t>
+    </page>
+    <page id="389963" title="True Relations" desc="" voice="no">
+        <t id="101">addon</t>
+    </page>
+</language>

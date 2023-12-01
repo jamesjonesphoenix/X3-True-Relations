@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<language id="44">
+    <!-- English -->
+    <page id="9963" title="True Relations" desc="" voice="no">
+<!-- Dynamic notoriety change = gain * (tradeSkill + fightSkill + 1) / ratio. Defaults to 100. -->
+        <t id="1">100(ratio)</t>
+<!-- Timer interval for wait between check for notoriety changes and IFF for sectors. Defaults to 180 seconds. -->
+        <t id="2">180(seconds)</t>
+<!-- True Relations Strings  -->
+        <t id="10">\033GTrue Relations\033X</t>
+        <t id="100">44</t>
+        <t id="101">(blank placeholder)</t>
+        <t id="1000">\033GTrue Relations\033X by FriendlyFirePhoenix. v%s</t>
+        <t id="1001">[author]{9963,10}[/author]\n[title]{9963,10} deactivated[/title]\n\nGlobal variable has been removed.\n\nTo completely remove any trace of {9963,10} follow these steps:\n1: Save your game.\n2: Delete the plugin files from your X3 directory.\n3: Reload your save.</t>
+        <t id="1002">[author]{9963,10}[/author]\n[title]Initialised {9963,10}[/title]\n\n{9963,10} will regularly apply dynamic notoriety changes in response to standard notoriety changes. You can change the ratio of the dynamic change to the original change in \033G\\X3\\{9963,101}\\t\\9963-L0{9963,100}.xml\033X.\n\nAs part of activation, the plugin has fixed IFF for stations and their owned ships across the galaxy. From now on {9963,10} will regularly select a random sector to fix IFF for, slowly working through the galaxy.\n\nIf you want to quickly fix IFF for the entire galaxy again you can deactivate and reactivate the plugin.</t>
+        <t id="1003">Initialising \033GTrue Relations\033X. This will take a little while...</t>
+        <t id="1004">\033GTrue Relations\033X initialised.</t>
+        <t id="1005">\033GTrue Relations\033X deactivated.</t>
+        <t id="1006">\033GTrue Relations\033X updated to version %s.</t>
+        <t id="1010">\033RLost\033X %s %s notoriety as effect of %s %s notoriety gain.</t>
+        <t id="1011">\033BGained\033X %s %s notoriety as effect of %s %s notoriety gain.</t>
+        <t id="1012">\033GTrue Relations\033X fixing IFF across galaxy...checked %s stations and %s owned ships.</t>
+        <t id="1015">The %s have \033Rdemoted\033X you to "%s" from anger at your %s notoriety gain.</t>
+        <t id="1016">The %s have \033Bpromoted\033X you to "%s" in accordance with your %s notoriety gain.</t>
+    </page>
+    <page id="389963" title="True Relations" desc="" voice="no">
+        <t id="101">addon</t>
+    </page>
+</language>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<language id="34">
+    <!-- Spanish -->
+    <page id="9963" title="True Relations" desc="" voice="no">
+<!-- Dynamic notoriety change = gain * (tradeSkill + fightSkill + 1) / ratio
+     You can change the ratio here, defaults to 100. -->
+        <t id="1">100(ratio)</t>
+<!-- Timer interval for wait between check for notoriety changes and IFF for sectors. Defaults to 180 seconds. -->
+        <t id="2">180(seconds)</t>
+<!-- True Relations Strings  -->
+        <t id="10">\033GTrue Relations\033X</t>
+        <t id="100">44</t>
+        <t id="101">(blank placeholder)</t>
+        <t id="1000">\033GTrue Relations\033X de FriendlyFirePhoenix. v%s</t>
+        <t id="1001">[author][green]True Relations[/green][/author]\n[title]{9963,10} Desactivado[/title]\n\nLa variable global ha sido eliminada.\n\nPara eliminar completamente cualquier rastro de {9963,10} sigue estos pasos:\n1: Guarda tu juego.\n2: Elimina los archivos del complemento de tu directorio X3.\n3: Vuelve a cargar tu juego.</t>
+        <t id="1002">[author][green]True Relations[/green][/author]\n[title]{9963,10} Inicializadas[/title]\n\n{9963,10} aplicará periódicamente cambios de notoriedad dinámicos en respuesta a los cambios de notoriedad estándar. Puede cambiar la proporción del cambio dinámico con respecto al cambio original en \033G\\X3\\{9963,101}\\t\\9963-L0{9963,100}.xml\033X.\n\nComo parte de la activación, el complemento ha solucionado el IFF para las estaciones y sus propias naves en toda la galaxia. De ahora en adelante, {9963,10} seleccionará periódicamente un sector aleatorio para reparar el IFF, trabajando lentamente a través de la galaxia. Si deseas volver a arreglar rápidamente el IFF para toda la galaxia, puedes desactivar y reactivar el complemento.</t>
+        <t id="1003">Inicializando \033GTrue Relations\033X. Esto tomará un poco de tiempo...</t>
+        <t id="1004">\033GTrue Relations\033X inicializado.</t>
+        <t id="1005">\033GTrue Relations\033X desactivado.</t>
+        <t id="1006">\033GTrue Relations\033X actualizado a la versión %s.</t>
+        <t id="1010">Perdió %s %s notoriedad como efecto de la ganancia de %s %s notoriedad.</t>
+        <t id="1011">Ganó %s %s notoriedad como efecto de %s %s notoriedad ganada.</t>
+        <t id="1012">\033GTrue Relations\033X reparando IFF en toda la galaxia... revisé %s estaciones y %s naves propias.</t>
+        <t id="1015">Los %s te han \033Rdegradado\033X a %s como castigo por tu ganancia de notoriedad de %s.</t>
+        <t id="1016">Los %s te han \033Bascendido\033X a %s como recompensa por tu ganancia de notoriedad de %s.</t>
+    </page>
+    <page id="389963" title="True Relations" desc="" voice="no">
+        <t id="101">addon</t>
+    </page>
+</language>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<language id="42">
+<!-- Czech -->
+<page id="9963" title="" desc="True Relations" voice="no">
+<!-- Dynamic notoriety change = gain * (tradeSkill + fightSkill + 1) / ratio
+     You can change the ratio here, defaults to 100. -->
+    <t id="1">100(ratio)</t>
+<!-- Timer interval for wait between check for notoriety changes and IFF for sectors. Defaults to 180 seconds. -->
+    <t id="2">180(seconds)</t>
+<!-- True Relations Strings  -->
+    <t id="10">\033GTrue Relations\033X</t>
+    <t id="100">44</t>
+    <t id="101">(blank placeholder)</t>
+    <t id="1000">\033GTrue Relations\033X od FriendlyFirePhoenix. v%s</t>
+    <t id="1001">[author][green]True Relations[/green][/author]\n[title]{9963,10} deaktivována[/title]\n\nGlobální proměnná byla odstraněna.\n\nChcete-li úplně odstranit jakoukoli stopu {9963,10}, postupujte takto:\n1: Uložte hru.\n2: Smažte soubory pluginu z adresáře X3.\n3: Znovu načtěte uložení.</t>
+    <t id="1002">[author][green]True Relations[/green][/author]\n[title]Inicializováno {9963,10}[/title]\n\n{9963,10} bude pravidelně uplatňovat dynamické změny proslulosti v reakci na standardní změny proslulosti. Poměr dynamické změny k původní změně můžete změnit v \033G\\X3\\{9963,101}\\t\\9963-L0{9963,100}.xml\033X.\n\nV rámci aktivace plugin opravil IFF pro stanice a jejich vlastněné lodě po celé galaxii. Od nynějška bude {9963,10} pravidelně vybírat náhodný sektor, pro který má opravit IFF, a pomalu procházet galaxií. Pokud chcete znovu rychle opravit IFF pro celou galaxii, můžete plugin deaktivovat a znovu aktivovat.</t>
+    <t id="1003">Inicializace \033GTrue Relations\033X. Bude to chvíli trvat...</t>
+    <t id="1004">\033GTrue Relations\033X inicializováno.</t>
+    <t id="1005">\033GTrue Relations\033X deaktivováno.</t>
+    <t id="1006">\033GTrue Relations\033X aktualizováno na verzi %s.</t>
+    <t id="1010">Ztráta %s %s proslulosti v důsledku %s %s zisku proslulosti.</t>
+    <t id="1011">Získal %s %s proslulost v důsledku %s %s zisku proslulosti.</t>
+    <t id="1012">\033GTrue Relations\033X oprava IFF napříč galaxií...zkontrolováno %s stanic a %s vlastněných lodí.</t>
+    <t id="1015">%s vás \033Rdegradovali\033X na %s jako trest za váš %s zisk proslulosti.</t>
+    <t id="1016">%s vás \033Bpovýšili\033X na %s jako odměnu za váš %s zisk proslulosti.</t>
+</page>
+<page id="389963" title="True Relations" desc="" voice="no">
+    <t id="101">addon</t>
+</page>
+</language>

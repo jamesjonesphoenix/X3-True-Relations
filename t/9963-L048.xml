@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<language id="48">
+    <!-- Polish -->
+    <page id="9963" title="True Relations" desc="" voice="no">
+<!-- Dynamic notoriety change = gain * (tradeSkill + fightSkill + 1) / ratio
+     You can change the ratio here, defaults to 100. -->
+        <t id="1">100(ratio)</t>
+<!-- Timer interval for wait between check for notoriety changes and IFF for sectors. Defaults to 180 seconds. -->
+        <t id="2">180(seconds)</t>
+<!-- True Relations Strings  -->
+        <t id="10">\033GTrue Relations\033X</t>
+        <t id="100">44</t>
+        <t id="101">(blank placeholder)</t>
+        <t id="1000">\033GTrue Relations\033X by FriendlyFirePhoenix. v%s</t>
+        <t id="1001">[author][green]True Relations[/green][/author]\n[title]Dezaktywowano {9963,10}[/title]\n\nZmienna globalna została usunięta.\n\nAby całkowicie usunąć wszelkie ślady {9963,10}, wykonaj następujące kroki:\n1: Zapisz grę.\n2: Usuń pliki wtyczek z katalogu X3.\n3: Załaduj ponownie swój zapis.</t>
+        <t id="1002">[author][green]True Relations[/green][/author]\n[title]Zainicjowane {9963,10}[/title]\n\n{9963,10} będzie regularnie stosować dynamiczne zmiany rozgłosu w odpowiedzi na standardowe zmiany rozgłosu. Możesz zmienić stosunek zmiany dynamicznej do oryginalnej zmiany w pliku \033G\\X3\\{9963,101}\\t\\9963-L0{9963,100}.xml\033X.\n\nW ramach aktywacji wtyczka naprawiła IFF dla stacji i posiadanych przez nie statków w całej galaktyce. Odtąd {9963,10} będzie regularnie wybierać losowy sektor, w którym będzie naprawiany IFF, powoli poruszając się po galaktyce. Jeśli chcesz ponownie szybko naprawić IFF dla całej galaktyki, możesz dezaktywować i ponownie aktywować wtyczkę.</t>
+        <t id="1003">Inicjowanie \033GTrue Relations\033X. To zajmie trochę czasu...</t>
+        <t id="1004">Zainicjowano \033GTrue Relations\033X.</t>
+        <t id="1005">\033GTrue Relations\033X dezaktywowane.</t>
+        <t id="1006">\033GTrue Relations\033X zaktualizowano do wersji %s.</t>
+        <t id="1010">Utracono %s %s rozgłos w wyniku zyskania %s %s rozgłosu.</t>
+        <t id="1011">Zdobyłeś %s %s rozgłos w wyniku przyrostu rozgłosu %s %s.</t>
+        <t id="1012">\033GPrawdziwe relacje\033X naprawianie IFF w całej galaktyce...sprawdzono stacje %s i statki należące do %s.</t>
+        <t id="1015">%s \033Rzdegradował\033X Cię do %s w ramach kary za zyskanie przez Ciebie %s rozgłosu.</t>
+        <t id="1016">%s \033Bpromowało\033X Cię do %s w nagrodę za zyskanie rozgłosu %s.</t>
+    </page>
+    <page id="389963" title="True Relations" desc="" voice="no">
+        <t id="101">addon</t>
+    </page>
+</language>
