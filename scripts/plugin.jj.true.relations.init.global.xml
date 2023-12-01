@@ -5,8 +5,10 @@
 	<name>plugin.jj.true.relations.init.global</name>
 	<version>1</version>
 	<engineversion>50</engineversion>
-	<description></description>
-	<arguments />
+	<description>Initialises main global array.</description>
+	<arguments>
+		<argument index="1" name="reset" type="Var/Boolean" desc="reset" />
+	</arguments>
 	<sourcetext>
 		<line linenr="001" indent="">
 			<comment>* ************************************************</comment>
@@ -18,13 +20,17 @@
 			<comment>* DESCRIPTION: Initialises main global array</comment>
 		</line>
 		<line linenr="004" indent="">
-			<comment>* </comment>
-		</line>
-		<line linenr="005" indent="">
 			<comment>* AUTHOR: JJ     DATE: 17 March 2023</comment>
 		</line>
-		<line linenr="006" indent="">
+		<line linenr="005" indent="">
 			<comment>* ************************************************</comment>
+		</line>
+		<line linenr="006" indent="">
+			<var>$pageID</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>9963</var>
 		</line>
 		<line linenr="007" indent="">
 			<var>$pluginData</var>
@@ -45,25 +51,215 @@
 		<line linenr="008" indent="">
 			<text>if</text>
 			<text> </text>
-			<text>not</text>
-			<text> </text>
 			<var>$pluginData</var>
 		</line>
 		<line linenr="009" indent="&#160;">
-			<var>$races</var>
+			<text>array</text>
+			<text> </text>
+			<text>or</text>
+			<text> </text>
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
+			<var>$pluginData</var>
+			<text> </text>
+			<text>(</text>
+			<var>2</var>
+			<text>)</text>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$pageID</var>
+		</line>
+		<line linenr="010" indent="&#160;">
+			<text>skip</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$reset</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>[TRUE]</var>
+		</line>
+		<line linenr="011" indent="&#160;&#160;">
+			<text>return</text>
+			<text> </text>
+			<var>$pluginData</var>
+		</line>
+		<line linenr="012" indent="&#160;">
+			<var>$activated</var>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<text>array</text>
 			<text> </text>
-			<text>alloc</text>
+			<text>or</text>
+			<text> </text>
+			<text>table</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<var>$pluginData</var>
+			<text> </text>
+			<text>(</text>
+			<var>1</var>
+			<text>)</text>
+		</line>
+		<line linenr="013" indent="&#160;">
+			<var>$debug</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<text>or</text>
+			<text> </text>
+			<text>table</text>
+			<text> </text>
+			<text>get</text>
+			<text> </text>
+			<var>$pluginData</var>
+			<text> </text>
+			<text>(</text>
+			<var>3</var>
+			<text>)</text>
+		</line>
+		<line linenr="014" indent="&#160;">
+			<text>if</text>
+			<text> </text>
+			<var>$debug</var>
+			<text> </text>
+			<text>==</text>
+			<text> </text>
+			<var>[TRUE]</var>
+		</line>
+		<line linenr="015" indent="&#160;&#160;">
+			<var>$debug</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>$pageID</var>
+		</line>
+		<line linenr="016" indent="&#160;">
+			<text>else</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$debug</var>
+			<text> </text>
+			<text>!=</text>
+			<text> </text>
+			<var>$pageID</var>
+		</line>
+		<line linenr="017" indent="&#160;&#160;">
+			<var>$debug</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="018" indent="&#160;">
+			<text>end</text>
+		</line>
+		<line linenr="019" indent="">
+			<text>else</text>
+		</line>
+		<line linenr="020" indent="&#160;">
+			<var>$activated</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="021" indent="&#160;">
+			<var>$debug</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[FALSE]</var>
+		</line>
+		<line linenr="022" indent="">
+			<text>end</text>
+		</line>
+		<line linenr="023" indent="">
+			<comment>* - - -</comment>
+		</line>
+		<line linenr="024" indent="" interruptable="@">
+			<var>$races</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[THIS]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>plugin.jj.lib.get.races</call>
+			<text> </text>
 			<text>:</text>
 			<text> </text>
-			<text>size</text>
+			<text>criminals</text>
 			<text>=</text>
+			<var>null</var>
+			<text> </text>
+			<text>disguises</text>
+			<text>=</text>
+			<var>null</var>
+			<text> </text>
+			<text>raceIDs</text>
+			<text>=</text>
+			<var>null</var>
+			<text> </text>
+			<text>noHostiles</text>
+			<text>=</text>
+			<var>[TRUE]</var>
+		</line>
+		<line linenr="025" indent="">
+			<text>insert</text>
+			<text> </text>
+			<var>[Player]</var>
+			<text> </text>
+			<text>into</text>
+			<text> </text>
+			<text>array</text>
+			<text> </text>
+			<var>$races</var>
+			<text> </text>
+			<text>at</text>
+			<text> </text>
+			<text>index</text>
+			<text> </text>
 			<var>0</var>
 		</line>
-		<line linenr="010" indent="&#160;">
+		<line linenr="026" indent="" interruptable="@">
+			<var>$notorieties</var>
+			<text> </text>
+			<text>=</text>
+			<text> </text>
+			<var>[THIS]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>plugin.jj.true.relations.init.notorieties</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>races</text>
+			<text>=</text>
+			<var>$races</var>
+			<text> </text>
+			<text>debug</text>
+			<text>=</text>
+			<var>$debug</var>
+		</line>
+		<line linenr="027" indent="">
 			<var>$sectors</var>
 			<text> </text>
 			<text>=</text>
@@ -77,24 +273,7 @@
 			<text>=</text>
 			<var>0</var>
 		</line>
-		<line linenr="011" indent="&#160;">
-			<var>$notorieties</var>
-			<text> </text>
-			<text>=</text>
-			<text> </text>
-			<text>array</text>
-			<text> </text>
-			<text>alloc</text>
-			<text>:</text>
-			<text> </text>
-			<text>size</text>
-			<text>=</text>
-			<var>0</var>
-		</line>
-		<line linenr="012" indent="&#160;">
-			<comment>* ** - - - 0: version, 1: activated, 2: pageID, 3: debug, 4: races, 5: notorieties, 6: sectors to fix,</comment>
-		</line>
-		<line linenr="013" indent="&#160;">
+		<line linenr="028" indent="">
 			<var>$pluginData</var>
 			<text> </text>
 			<text>=</text>
@@ -108,77 +287,143 @@
 			<text>=</text>
 			<var>7</var>
 		</line>
-		<line linenr="014" indent="&#160;">
+		<line linenr="029" indent="">
+			<comment>* - - - 0: version, 1: activated, 2: pageID, 3: debug, 4: races, 5: notorieties, 6: sectors to fix,</comment>
+		</line>
+		<line linenr="030" indent="">
+			<text>array</text>
+			<text> </text>
+			<text>or</text>
+			<text> </text>
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
 			<var>$pluginData</var>
-			<text>[</text>
+			<text> </text>
+			<text>(</text>
 			<var>0</var>
-			<text>]</text>
+			<text>)</text>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<var>6</var>
+			<var>7</var>
 		</line>
-		<line linenr="015" indent="">
+		<line linenr="031" indent="">
+			<text>array</text>
+			<text> </text>
+			<text>or</text>
+			<text> </text>
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
 			<var>$pluginData</var>
-			<text>[</text>
+			<text> </text>
+			<text>(</text>
 			<var>1</var>
-			<text>]</text>
+			<text>)</text>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<var>[FALSE]</var>
+			<var>$activated</var>
 		</line>
-		<line linenr="016" indent="">
+		<line linenr="032" indent="">
+			<text>array</text>
+			<text> </text>
+			<text>or</text>
+			<text> </text>
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
 			<var>$pluginData</var>
-			<text>[</text>
+			<text> </text>
+			<text>(</text>
 			<var>2</var>
-			<text>]</text>
+			<text>)</text>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<var>9964</var>
+			<var>$pageID</var>
 		</line>
-		<line linenr="017" indent="">
+		<line linenr="033" indent="">
+			<text>array</text>
+			<text> </text>
+			<text>or</text>
+			<text> </text>
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
 			<var>$pluginData</var>
-			<text>[</text>
+			<text> </text>
+			<text>(</text>
 			<var>3</var>
-			<text>]</text>
+			<text>)</text>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
-			<var>[FALSE]</var>
+			<var>$debug</var>
 		</line>
-		<line linenr="018" indent="">
+		<line linenr="034" indent="">
+			<text>array</text>
+			<text> </text>
+			<text>or</text>
+			<text> </text>
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
 			<var>$pluginData</var>
-			<text>[</text>
+			<text> </text>
+			<text>(</text>
 			<var>4</var>
-			<text>]</text>
+			<text>)</text>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<var>$races</var>
 		</line>
-		<line linenr="019" indent="">
+		<line linenr="035" indent="">
+			<text>array</text>
+			<text> </text>
+			<text>or</text>
+			<text> </text>
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
 			<var>$pluginData</var>
-			<text>[</text>
+			<text> </text>
+			<text>(</text>
 			<var>5</var>
-			<text>]</text>
+			<text>)</text>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<var>$notorieties</var>
 		</line>
-		<line linenr="020" indent="">
+		<line linenr="036" indent="">
+			<text>array</text>
+			<text> </text>
+			<text>or</text>
+			<text> </text>
+			<text>table</text>
+			<text> </text>
+			<text>set</text>
+			<text> </text>
 			<var>$pluginData</var>
-			<text>[</text>
+			<text> </text>
+			<text>(</text>
 			<var>6</var>
-			<text>]</text>
+			<text>)</text>
 			<text> </text>
 			<text>=</text>
 			<text> </text>
 			<var>$sectors</var>
 		</line>
-		<line linenr="021" indent="">
+		<line linenr="037" indent="">
 			<text>set</text>
 			<text> </text>
 			<text>global</text>
@@ -194,50 +439,246 @@
 			<text>=</text>
 			<var>$pluginData</var>
 		</line>
-		<line linenr="022" indent="">
-			<text>end</text>
+		<line linenr="038" indent="">
+			<text>do</text>
+			<text> </text>
+			<text>if</text>
+			<text> </text>
+			<var>$debug</var>
 		</line>
-		<line linenr="023" indent="">
+		<line linenr="039" indent="&#160;" interruptable="@">
+			<text>=</text>
+			<text> </text>
+			<var>[THIS]</var>
+			<text>-&gt;</text>
+			<text> </text>
+			<text>call</text>
+			<text> </text>
+			<text>script</text>
+			<text> </text>
+			<call>plugin.jj.lib.log.array</call>
+			<text> </text>
+			<text>:</text>
+			<text> </text>
+			<text>prepend</text>
+			<text>=</text>
+			<text>'True Relations Global Array'</text>
+			<text> </text>
+			<text>array</text>
+			<text>=</text>
+			<var>$pluginData</var>
+			<text> </text>
+			<text>logFile</text>
+			<text>=</text>
+			<var>$pageID</var>
+		</line>
+		<line linenr="040" indent="">
 			<text>return</text>
 			<text> </text>
 			<var>$pluginData</var>
 		</line>
-		<line linenr="024" indent="" />
-		<line linenr="025" indent="" />
-		<line linenr="026" indent="" />
 	</sourcetext>
 	<codearray>
 		<sval type="array" size="10">
 			<sval type="string" val="plugin.jj.true.relations.init.global" />
 			<sval type="int" val="50" />
-			<sval type="string" val="" />
+			<sval type="string" val="Initialises main global array." />
 			<sval type="int" val="1" />
 			<sval type="int" val="0" />
-			<sval type="array" size="4">
+			<sval type="array" size="8">
+				<sval type="string" val="reset" />
+				<sval type="string" val="pageID" />
 				<sval type="string" val="pluginData" />
+				<sval type="string" val="activated" />
+				<sval type="string" val="debug" />
 				<sval type="string" val="races" />
-				<sval type="string" val="sectors" />
 				<sval type="string" val="notorieties" />
+				<sval type="string" val="sectors" />
 			</sval>
-			<sval type="array" size="15">
-				<sval type="array" size="4">
-					<sval type="int" val="158" />
-					<sval type="int" val="5" />
-					<sval type="string" val="plugin.jj.true.relations" />
-					<sval type="int" val="0" />
-				</sval>
+			<sval type="array" size="32">
 				<sval type="array" size="7">
 					<sval type="int" val="104" />
-					<sval type="int" val="-536867324" />
 					<sval type="int" val="1" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="9963" />
 					<sval type="int" val="1" />
 					<sval type="int" val="-1" />
 				</sval>
 				<sval type="array" size="4">
-					<sval type="int" val="128" />
+					<sval type="int" val="158" />
+					<sval type="int" val="5" />
+					<sval type="string" val="plugin.jj.true.relations" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610609149" />
 					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="130" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="4" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-536869369" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="103" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="129" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+				</sval>
+				<sval type="array" size="6">
+					<sval type="int" val="129" />
+					<sval type="int" val="4" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610609917" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+					<sval type="int" val="15" />
+					<sval type="int" val="0" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="0" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="13" />
+				</sval>
+				<sval type="array" size="13">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610609403" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
+					<sval type="int" val="15" />
+					<sval type="int" val="1" />
+					<sval type="int" val="3" />
+					<sval type="int" val="-1" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="2">
+					<sval type="int" val="112" />
+					<sval type="int" val="16" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="3" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="9" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="14">
+					<sval type="int" val="102" />
+					<sval type="string" val="plugin.jj.lib.get.races" />
+					<sval type="int" val="5" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="1" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="0" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="134" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="4" />
+					<sval type="int" val="0" />
+					<sval type="int" val="10" />
+					<sval type="int" val="10" />
+				</sval>
+				<sval type="array" size="10">
+					<sval type="int" val="102" />
+					<sval type="string" val="plugin.jj.true.relations.init.notorieties" />
+					<sval type="int" val="6" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="1" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="4">
+					<sval type="int" val="128" />
+					<sval type="int" val="7" />
 					<sval type="int" val="4" />
 					<sval type="int" val="0" />
 				</sval>
@@ -245,16 +686,13 @@
 					<sval type="int" val="128" />
 					<sval type="int" val="2" />
 					<sval type="int" val="4" />
-					<sval type="int" val="0" />
+					<sval type="int" val="7" />
 				</sval>
-				<sval type="array" size="4">
-					<sval type="int" val="128" />
-					<sval type="int" val="3" />
+				<sval type="array" size="7">
+					<sval type="int" val="130" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
 					<sval type="int" val="4" />
-					<sval type="int" val="0" />
-				</sval>
-				<sval type="array" size="4">
-					<sval type="int" val="128" />
 					<sval type="int" val="0" />
 					<sval type="int" val="4" />
 					<sval type="int" val="7" />
@@ -262,81 +700,100 @@
 				<sval type="array" size="7">
 					<sval type="int" val="130" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
-					<sval type="int" val="4" />
-					<sval type="int" val="0" />
-					<sval type="int" val="4" />
-					<sval type="int" val="6" />
-				</sval>
-				<sval type="array" size="7">
-					<sval type="int" val="130" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
-					<sval type="int" val="4" />
-					<sval type="int" val="1" />
-					<sval type="int" val="131075" />
-					<sval type="int" val="9" />
-				</sval>
-				<sval type="array" size="7">
-					<sval type="int" val="130" />
-					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
-					<sval type="int" val="4" />
 					<sval type="int" val="2" />
 					<sval type="int" val="4" />
-					<sval type="int" val="9964" />
-				</sval>
-				<sval type="array" size="7">
-					<sval type="int" val="130" />
+					<sval type="int" val="1" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
-					<sval type="int" val="4" />
 					<sval type="int" val="3" />
-					<sval type="int" val="131075" />
-					<sval type="int" val="9" />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="130" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
+					<sval type="int" val="2" />
 					<sval type="int" val="4" />
-					<sval type="int" val="4" />
+					<sval type="int" val="2" />
 					<sval type="int" val="131074" />
 					<sval type="int" val="1" />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="130" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
+					<sval type="int" val="2" />
+					<sval type="int" val="4" />
+					<sval type="int" val="3" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="130" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="4" />
+					<sval type="int" val="4" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="5" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="130" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
 					<sval type="int" val="4" />
 					<sval type="int" val="5" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="3" />
+					<sval type="int" val="6" />
 				</sval>
 				<sval type="array" size="7">
 					<sval type="int" val="130" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
+					<sval type="int" val="2" />
 					<sval type="int" val="4" />
 					<sval type="int" val="6" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="2" />
+					<sval type="int" val="7" />
 				</sval>
 				<sval type="array" size="5">
 					<sval type="int" val="157" />
 					<sval type="int" val="5" />
 					<sval type="string" val="plugin.jj.true.relations" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
+					<sval type="int" val="2" />
+				</sval>
+				<sval type="array" size="7">
+					<sval type="int" val="104" />
+					<sval type="int" val="-1610604792" />
+					<sval type="int" val="1" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="4" />
+					<sval type="int" val="1" />
+					<sval type="int" val="-1" />
+				</sval>
+				<sval type="array" size="12">
+					<sval type="int" val="102" />
+					<sval type="string" val="plugin.jj.lib.log.array" />
+					<sval type="int" val="-2147483647" />
+					<sval type="int" val="131075" />
+					<sval type="int" val="1" />
+					<sval type="int" val="3" />
+					<sval type="int" val="5" />
+					<sval type="string" val="True Relations Global Array" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="2" />
+					<sval type="int" val="131074" />
+					<sval type="int" val="1" />
 				</sval>
 				<sval type="array" size="3">
 					<sval type="int" val="103" />
 					<sval type="int" val="131074" />
-					<sval type="int" val="0" />
+					<sval type="int" val="2" />
 				</sval>
 			</sval>
-			<sval type="int" val="0" />
-			<sval type="array" size="11">
+			<sval type="array" size="1">
+				<sval type="array" size="2">
+					<sval type="int" val="63" />
+					<sval type="string" val="reset" />
+				</sval>
+			</sval>
+			<sval type="array" size="10">
 				<sval type="array" size="3">
 					<sval type="int" val="0" />
 					<sval type="int" val="1" />
@@ -355,11 +812,6 @@
 				<sval type="array" size="3">
 					<sval type="int" val="0" />
 					<sval type="int" val="1" />
-					<sval type="string" val="" />
-				</sval>
-				<sval type="array" size="3">
-					<sval type="int" val="0" />
-					<sval type="int" val="1" />
 					<sval type="string" val="AUTHOR: JJ     DATE: 17 March 2023" />
 				</sval>
 				<sval type="array" size="3">
@@ -367,26 +819,27 @@
 					<sval type="int" val="1" />
 					<sval type="string" val="************************************************" />
 				</sval>
-				<sval type="array" size="3">
-					<sval type="int" val="5" />
-					<sval type="int" val="1" />
-					<sval type="string" val="** - - - 0: version, 1: activated, 2: pageID, 3: debug, 4: races, 5: notorieties, 6: sectors to fix," />
-				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="14" />
+					<sval type="int" val="13" />
 					<sval type="int" val="4" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="15" />
-					<sval type="int" val="2" />
+					<sval type="int" val="14" />
+					<sval type="int" val="5" />
 				</sval>
 				<sval type="array" size="2">
-					<sval type="int" val="15" />
-					<sval type="int" val="2" />
+					<sval type="int" val="16" />
+					<sval type="int" val="4" />
 				</sval>
-				<sval type="array" size="2">
-					<sval type="int" val="15" />
-					<sval type="int" val="2" />
+				<sval type="array" size="3">
+					<sval type="int" val="16" />
+					<sval type="int" val="1" />
+					<sval type="string" val="- - -" />
+				</sval>
+				<sval type="array" size="3">
+					<sval type="int" val="21" />
+					<sval type="int" val="1" />
+					<sval type="string" val="- - - 0: version, 1: activated, 2: pageID, 3: debug, 4: races, 5: notorieties, 6: sectors to fix," />
 				</sval>
 			</sval>
 			<sval type="int" val="0" />
