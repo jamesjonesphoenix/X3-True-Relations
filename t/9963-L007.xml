@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<language id="7">
+    <!-- Russian -->
+    <page id="9963" title="True Relations" desc="" voice="no">
+<!-- Dynamic notoriety change = gain * (tradeSkill + fightSkill + 1) / ratio. Defaults to 100. -->
+        <t id="1">100(ratio)</t>
+<!-- Timer interval for wait between check for notoriety changes and IFF for sectors. Defaults to 180 seconds. -->
+        <t id="2">180(seconds)</t>
+<!-- Chance of dynamic notoriety check is randomised. The check occurs on each timer interval (every 180 seconds by default). Defaults to 20 percent which means a check every 15 minutes on average. -->
+        <t id="3">20(percent)</t>
+<!-- True Relations Strings  -->
+        <t id="10">\033GTrue Relations\033X</t>
+        <t id="100">07</t>
+        <t id="101">(blank placeholder)</t>
+        <t id="1000">\033GTrue Relations\033X by FriendlyFirePhoenix. v%s</t>
+        <t id="1001">[author]{9963,10}[/author]\n[title]{9963,10} отключен[/title]\n\nГлобальная переменная удалена.\n\nДля полного удаления всех следов {9963,10} выполните следующие действия:\n1: Сохраните игру.\n2: Удалите файлы плагина из каталога X3.\n3: Загрузите свое сохранение.</t>
+        <t id="1002">[author]{9963,10}[/author]\n[title]{9963,10} установлен[/title]\n\n{9963,10} будет постоянно вносить динамические изменения в репутацию вслед за обычными изменениями репутации. Вы можете изменить коэффициент динамических изменений к оригинальным значениям \033G\\X3\\{9963,101}\\t\\9963-L0{9963,100}.xml\033X.\n\nПри активации плагин исправил IFF для станций и принадлежащих им кораблей во всей галактике. С этого момента {9963,10} будет регулярно выбирать случайный сектор для исправления IFF, постепенно проходя через всю галактику.\n\nЕсли вы хотите быстро исправить IFF во всей галактике, вы можете деактивировать и снова активировать плагин.</t>
+        <t id="1003">Инициализация \033GTrue Relations\033X. Это займет некоторое время...</t>
+        <t id="1004">\033GTrue Relations\033X установлен.</t>
+        <t id="1005">\033GTrue Relations\033X деактивирован.</t>
+        <t id="1006">\033GTrue Relations\033X обновлен до версии %s.</t>
+        <t id="1010">\033RПотеряно\033X %s %s репутации в результате приобретения %s %s репутации.</t>
+        <t id="1011">\033BПолучил\033X %s %s репутации в результате получения %s %s репутации.</t>
+        <t id="1012">\033GTrue Relations\033X исправление IFF в галактике... проверено %s станций и %s принадлежащим им кораблей.</t>
+        <t id="1015">%s \033Rпонизили\033X вас до "%s" из-за получения репутации у %s.</t>
+        <t id="1016">%s \033Bповысили\033X вас до "%s" за получение репутации у %s.</t>
+    </page>
+    <page id="389963" title="True Relations" desc="" voice="no">
+        <t id="101">addon</t>
+    </page>
+</language>
