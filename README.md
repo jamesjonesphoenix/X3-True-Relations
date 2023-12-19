@@ -84,6 +84,7 @@ The IFF Fixer is particularly useful for two situations
 
 ### Languages
 
+* Russian (Provided by [Alexalsp](https://forum.egosoft.com/viewtopic.php?f=94&t=453035#p5209255))
 * English (my native language)
 * German (checked by Olsch)
 * French
@@ -91,6 +92,7 @@ The IFF Fixer is particularly useful for two situations
 * Italian
 * Czech 
 * Polish
+* Japanese
 
 ### Why an X3 mod in 2023?
 
@@ -103,6 +105,12 @@ Because I'm an idiot.
 * Thanks Jack08 for Improved Races 2. I began this plugin as a port of the True Relations feature of that mod. 
 
 ## Changelog
+
+##### 1.2.1
+
+* Added Russian translation provided by [Alexalsp](https://forum.egosoft.com/viewtopic.php?f=94&t=453035#p5209255). 
+* Added Japanese translation. 
+
 ##### 1.2
 
 * Separated True Relations & [Colour By Race](https://github.com/jamesjonesphoenix/X3-Colour-By-Race) into separate t files. True Relations now uses 9963. Previously it used 9964. Colour By Race uses 9964 and 9965.
